@@ -1,0 +1,51 @@
+[
+    {
+        "name": "eftec/bladeone",
+        "version": "2.3",
+        "version_normalized": "2.3.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/EFTEC/BladeOne.git",
+            "reference": "92481f1f59784084a60d27e1c66374117c078bba"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/EFTEC/BladeOne/zipball/92481f1f59784084a60d27e1c66374117c078bba",
+            "reference": "92481f1f59784084a60d27e1c66374117c078bba",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4"
+        },
+        "time": "2018-04-13T12:24:53+00:00",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "2.3-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "eftec\\": "vendor/eftec/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jorge Patricio Castro Castillo",
+                "email": "jcastro@eftec.cl"
+            }
+        ],
+        "description": "The standalone version Blade Template Engine from Laravel in a single php file",
+        "homepage": "https://github.com/EFTEC/BladeOne",
+        "keywords": [
+            "blade",
+            "template",
+            "view"
+        ]
+    }
+]

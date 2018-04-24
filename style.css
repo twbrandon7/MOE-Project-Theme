@@ -1,0 +1,47 @@
+/*
+Theme Name:跨校職場英語力培育計畫 Wordpress 布景
+Theme URI: http://langcenter.niu.edu.tw
+Description: 為「跨校職場英語力培育計畫」網站所設計的布景，修改自https://startbootstrap.com/template-overviews/clean-blog/
+Version:1.0.0.01
+Author:陳立献 (Li-Xian Chen)
+Author URI:http://pws.niu.edu.tw/~b0543017/
+Tags:Wordpress
+*/
+@import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+
+
+.footer_title {
+  font-size: 1.64rem;
+  line-height: 110%;
+  margin: 1.0933333333rem 0 0.656rem 0;
+}
+
+/* .clear_ul {
+  list-style-type: none;
+}
+
+.intro_column {
+  background-size: cover;
+  min-height: 300px !important;
+  max-height: 400px !important;
+  margin-top: 20px;
+}
+
+.intro_row {
+  margin-top: 50px;
+}
+
+.footer .social{
+  text-align: center;
+  margin-bottom: 10px;
+}
+.footer .social i{
+  letter-spacing: 50px;
+  color:#ddd !important;
+  font-size:48px;
+}
+
+.footer .social i:hover{
+  color:#fff !important;
+} */
