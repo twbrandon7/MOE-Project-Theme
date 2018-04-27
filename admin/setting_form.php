@@ -49,12 +49,15 @@
                 </td>
             </tr>
 
-            <!--<tr valign="top">
-                <th scope="row">Some Other Option</th>
-                <td><input type="text" name="some_other_option" value="<?php //echo esc_attr( get_option('some_other_option') ); ?>" /></td>
+            <tr valign="top">
+                <th scope="row">首頁相簿</th>
+                <td>
+                    <input type="text" id="index_gallery_image_ids" name="index_gallery_image_ids" value="<?php echo esc_attr( get_option('index_gallery_image_ids') ); ?>" readonly/>
+                    <input id="upload_image_button" type="button" class="button" value="<?php _e( '上傳 / 選擇圖片' ); ?>"/>
+                </td>
             </tr>
             
-            <tr valign="top">
+            <!--<tr valign="top">
                 <th scope="row">Options, Etc.</th>
                 <td><input type="text" name="option_etc" value="<?php //echo esc_attr( get_option('option_etc') ); ?>" /></td>
             </tr>-->
@@ -69,7 +72,7 @@
     
     function media_selector_print_scripts() {
     
-        $my_saved_attachment_post_id = get_option( 'media_selector_attachment_id', 0 );
+        $my_saved_attachment_post_id = get_option( 'image_attachment_id', 0 );
     
         ?><script type='text/javascript'>
             jQuery( document ).ready( function( $ ) {
@@ -92,19 +95,25 @@
                     }
                     // Create the media frame.
                     file_frame = wp.media.frames.file_frame = wp.media({
-                        title: 'Select a image to upload',
+                        title: '選擇要上傳的圖片',
                         button: {
-                            text: 'Use this image',
+                            text: '使用這些圖片',
                         },
-                        multiple: false	// Set to true to allow multiple files to be selected
+                        multiple: true	// Set to true to allow multiple files to be selected
                     });
                     // When an image is selected, run a callback.
                     file_frame.on( 'select', function() {
                         // We set multiple to false so only get one image from the uploader
-                        attachment = file_frame.state().get('selection').first().toJSON();
+                        //attachment = file_frame.state().get('selection').first().toJSON();
+                        var selections = file_frame.state().get('selection');
+                        var ids = [];
+                        for(var i = 0; i < selections.length; i++){
+                            var attachment = selections.models[i].toJSON();
+                            ids.push(attachment.id);
+                        }
                         // Do something with attachment.id and/or attachment.url here
-                        $( '#image-preview' ).attr( 'src', attachment.url )/*.css( 'width', 'auto' )*/;
-                        $( '#index_cover_image_path' ).val( attachment.id );
+                        //$( '#image-preview' ).attr( 'src', attachment.url )/*.css( 'width', 'auto' )*/;
+                        $( '#index_gallery_image_ids' ).val( JSON.stringify(ids) );
                         // Restore the main post ID
                         wp.media.model.settings.post.id = wp_media_post_id;
                     });

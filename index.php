@@ -2,6 +2,17 @@
 
 <div class="section no-pad-bot" id="index-banner">
     <div class="container">
+        <div class="row">
+                <div class="col s12 m4 l2"></div>
+                <div class="col s12 m4 l8">
+                    <?php
+                        display_gallery( json_decode( esc_attr( get_option('index_gallery_image_ids') ) ) );
+                    ?>
+                </div>
+                <div class="col s12 m4 l2"></div>
+            </div>   
+        </div>
+    <div class="container">
         <!-- <br>
         <br>
         <h1 class="header center orange-text">Starter Template</h1>
@@ -13,12 +24,15 @@
         </div>
         <br>
         <br> -->
+        <!--  -->         
+
+        <!--  -->
         <?php
-			$postObj = get_post(esc_attr(get_option('index_page_id')));
-			$content = $postObj->post_content;
-			$content = apply_filters( 'the_content', $content );
-			$content = str_replace( ']]>', ']]&gt;', $content );
-			echo $content;
+			// $postObj = get_post(esc_attr(get_option('index_page_id')));
+			// $content = $postObj->post_content;
+			// $content = apply_filters( 'the_content', $content );
+			// $content = str_replace( ']]>', ']]&gt;', $content );
+			// echo $content;
 		?>
     </div>
 </div>

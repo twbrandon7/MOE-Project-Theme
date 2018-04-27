@@ -1,10 +1,9 @@
 <?php
 
 require get_template_directory() . '/vendor/autoload.php';
-use eftec\bladeone\BladeOne;
-define("BLADEONE_MODE",2);
+use Jenssegers\Blade\Blade;
 
-$blade = new BladeOne(get_template_directory().'/views', get_template_directory() .'/cache');
+$blade = new Blade(get_template_directory().'/views', get_template_directory() .'/cache');
 
 function displayNavBar(){
 	global $blade;
@@ -22,7 +21,7 @@ function displayNavBar(){
 			}
 		}
 	}
-	echo $blade->run('nav_bar', [
+	echo $blade->make('nav_bar', [
 		'links'=>$links
 	]);
 }
@@ -48,7 +47,7 @@ function displaySideBar(){
 		}
 	}
 	foreach($links_map as $key => $value){
-		echo $blade->run('side_bar', [
+		echo $blade->make('side_bar', [
 			'links'=>$value, 
 			'id'=>str_replace("id_", "", $key),
 		]);

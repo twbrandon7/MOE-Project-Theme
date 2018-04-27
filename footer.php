@@ -40,6 +40,10 @@
             "hover": true,
             "constrainWidth": false,
         });
+
+        $(document).ready(function(){
+            $('.slider').slider();
+        });
     });
 </script>
 </body>

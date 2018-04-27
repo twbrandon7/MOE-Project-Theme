@@ -17,7 +17,7 @@ function theme_options() {
 }
 
 function register_theme_settings() { // whitelist options
-    register_setting( 'home_setting', 'index_cover_image_path' );
+    register_setting( 'home_setting', 'index_gallery_image_ids' );
     register_setting( 'home_setting', 'index_page_id' );
     //register_setting( 'home_setting', 'option_etc' );
 }

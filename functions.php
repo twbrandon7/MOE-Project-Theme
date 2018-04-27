@@ -1,10 +1,10 @@
 <?php
 require get_template_directory() . '/functions/navbar_generator.php';
+require get_template_directory() . '/functions/gallery_generator.php';
 require get_template_directory() . '/vendor/autoload.php';
 
-use eftec\bladeone\BladeOne;
-define("BLADEONE_MODE",2);
-$blade = new BladeOne(get_template_directory().'/views', get_template_directory() .'/cache');
+use Jenssegers\Blade\Blade;
+$blade = new Blade(get_template_directory().'/views', get_template_directory() .'/cache');
 
 
 function theme_styles() {
