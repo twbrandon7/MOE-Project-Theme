@@ -8,13 +8,40 @@ Author URI:http://pws.niu.edu.tw/~b0543017/
 Tags:Wordpress
 */
 @import url(//fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(//fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
 
+body {
+  background-color: rgb(246,179,127);
+}
 
+.container_background {
+  background-color: rgb(250,205,137);
+}
+
+.post_content {
+  margin-left: 20px;
+  margin-right: 20px;
+}
 
 .footer_title {
   font-size: 1.64rem;
   line-height: 110%;
   margin: 1.0933333333rem 0 0.656rem 0;
+  text-align: center;
+}
+
+.menu {
+  margin-left: 50px;
+  font-size: 16px;
+  list-style-type: circle !important;
+}
+
+.menu li {
+  margin-top:20px;
+}
+
+.menu a {
+  color: rgb(240, 240, 240) !important;
 }
 
 /* .clear_ul {

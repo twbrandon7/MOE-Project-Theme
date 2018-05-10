@@ -1,23 +1,23 @@
     <!-- Footer -->
     <br/>
-    <footer class="page-footer center" style="background-color:rgb(89, 73, 63);">
+    <footer class="page-footer" style="background-color:rgb(89, 73, 63);">
         <div class="container">
-            <div class="row">
-                <div class="col l3 s12 white-text">
+            <div class="row footer_content">
+                <div class="col s4">
                     <?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('footer-left-widget') ) : else : ?>
                     <?php endif; ?>
                 </div>
-                <div class="col l3 s12">
+                <div class="col s4">
                     <?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('footer-center-widget') ) : else : ?>
                     <?php endif; ?>
                 </div>
-                <div class="col l3 s12">
+                <div class="col s4">
                     <?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('footer-right-widget') ) : else : ?>
                     <?php endif; ?>
                 </div>
             </div>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright center">
             <div class="container">
                 <?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('footer-copyright') ) : else :?>
                 <?php endif; ?>

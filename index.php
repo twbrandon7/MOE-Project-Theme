@@ -1,43 +1,19 @@
 <?php get_header(); ?>
 
-<div class="section no-pad-bot" id="index-banner">
-    <div class="container">
+
+<div class="container container_background">
+    <div class="section no-pad-bot" id="index-banner" style="margin-top:1px;">
         <div class="row">
-                <div class="col s12 m4 l2"></div>
-                <div class="col s12 m4 l8">
-                    <?php
-                        display_gallery( json_decode( esc_attr( get_option('index_gallery_image_ids') ) ) );
-                    ?>
-                </div>
-                <div class="col s12 m4 l2"></div>
-            </div>   
-        </div>
-    <div class="container">
-        <!-- <br>
-        <br>
-        <h1 class="header center orange-text">Starter Template</h1>
-        <div class="row center">
-        <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-        </div>
-        <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
-        </div>
-        <br>
-        <br> -->
-        <!--  -->         
-
-        <!--  -->
-        <?php
-			// $postObj = get_post(esc_attr(get_option('index_page_id')));
-			// $content = $postObj->post_content;
-			// $content = apply_filters( 'the_content', $content );
-			// $content = str_replace( ']]>', ']]&gt;', $content );
-			// echo $content;
-		?>
+            <div class="col s12 m4 l2"></div>
+            <div class="col s12 m4 l8">
+                <?php
+                    display_gallery( json_decode( esc_attr( get_option('index_gallery_image_ids') ) ) );
+                ?>
+            </div>
+            <div class="col s12 m4 l2"></div>
+        </div>   
     </div>
-</div>
 
-<div class="container">
     <div class="section">
         <div class="row">
             <?php
@@ -96,5 +72,5 @@
     </div>
 
     <!-- <?php get_sidebar(); ?> -->
+    <?php get_footer(); ?>
 </div>
-<?php get_footer(); ?>

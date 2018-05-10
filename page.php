@@ -12,26 +12,29 @@
     $author_url = get_author_posts_url( $postObj->post_author, $author );
 ?>
 
-<div class="container">
-    <div class="row post_content">
-        <div class="col-lg-8 col-md-10 mx-auto">
-            <h2><?php echo $title;?></h2>
-            <br/>
-            <?php echo $content;?>
-            <div class="post_title" style="margin-top:30px; margin-bottom:20px;">
-                <span class="post-meta">
-                    本文由 <a href="<?php echo $author_url;?>"><?php echo $author;?></a> 發表
-                    • <?php echo $post_date;?>
-                </span>
+<div class="container container_background">
+    <div class="section">
+        <div class="row post_content">
+            <div class="col s1"></div>
+            <div class="col s10">
+                <h2><?php echo $title;?></h2>
+                <br/>
+                <?php echo $content;?>
+                <div class="post_title" style="margin-top:30px; margin-bottom:20px;">
+                    <span class="post-meta">
+                        本文由 <a href="<?php echo $author_url;?>"><?php echo $author;?></a> 發表
+                        • <?php echo $post_date;?>
+                    </span>
+                </div>
             </div>
+            <div class="col s1"></div>
+        </div>
+        
+        <div>
+            <?php //comments_template(); ?>
         </div>
     </div>
-    
-    <div>
-        <?php //comments_template(); ?>
-    </div>
+
+    <!-- <?php get_sidebar(); ?> -->
+    <?php get_footer(); ?>
 </div>
-<!-- <div class="col-lg-3 sidebar">
-    <?php get_sidebar(); ?>
-</div> -->
-<?php get_footer(); ?>
