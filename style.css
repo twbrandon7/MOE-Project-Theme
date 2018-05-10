@@ -23,6 +23,27 @@ body {
   margin-right: 20px;
 }
 
+.card-image{
+  max-height: 400px; /* Your height here */
+  overflow: hidden;
+}
+
+.intro_column {
+  background-size: cover;
+  min-height: 300px !important;
+  max-height: 400px !important;
+  margin-top: 20px;
+}
+
+.intro_content {
+  font-size: 20px;
+}
+
+.post_content {
+  font-size: 20px;
+  line-height: 2.0;
+}
+
 .footer_title {
   font-size: 1.64rem;
   line-height: 110%;
