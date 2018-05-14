@@ -13,6 +13,20 @@
   <link rel="alternate" type="application/atom+xml" title="Atom 1.0" href="<?php bloginfo('atom_url'); ?>" />
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
   <?php wp_head(); ?>
+
+  <style>
+    .index_gallery_background {
+        background-color:rgb(255, 247, 153) !important;
+        background-image: url("<?php echo get_template_directory_uri() . '/image/index_gallery_left.png'?>"), url("<?php echo get_template_directory_uri() . '/image/index_gallery_right_cut.png'?>");
+        background-repeat: no-repeat, no-repeat;
+        background-position: left bottom, right bottom;
+        background-size: auto 70%, auto 60%;
+        margin-top: 1px;
+        width: 100%;
+        height: 70% !important;
+        margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
   <div>

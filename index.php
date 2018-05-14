@@ -1,17 +1,23 @@
 <?php get_header(); ?>
 
-
 <div class="container container_background">
-    <div class="section no-pad-bot" id="index-banner" style="margin-top:1px;">
-        <div class="row">
-            <div class="col s12 m4 l2"></div>
-            <div class="col s12 m4 l8">
-                <?php
-                    display_gallery( json_decode( esc_attr( get_option('index_gallery_image_ids') ) ) );
-                ?>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="cover_container">
+            <div class="navi index_gallery_background"></div>
+            <div class="infoi">
+                <div class="row index_slider">
+                    <div class="col s3"></div>
+                    <div class="col s6">
+                        <div style="padding:10px; background-color:white; border: rounded; border-radius: 10px;">
+                            <?php
+                                display_gallery( json_decode( esc_attr( get_option('index_gallery_image_ids') ) ) );
+                            ?>
+                        </div>
+                    </div>
+                    <div class="col s3"></div>
+                </div>   
             </div>
-            <div class="col s12 m4 l2"></div>
-        </div>   
+        </div>
     </div>
 
     <div class="section">

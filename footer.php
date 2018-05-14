@@ -44,6 +44,13 @@
         $(document).ready(function(){
             $('.slider').slider();
         });
+
+        $(document).ready(function(){
+            $('.index_slider').find('.slider').slider({
+                indicators:false,
+                interval:3000
+            });
+        });
     });
 </script>
 </body>
