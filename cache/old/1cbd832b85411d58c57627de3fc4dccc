@@ -1,0 +1,24 @@
+<nav class="lighten-1" style="background-color:rgb(89, 73, 63);height:50px;line-height:50px;margin-top:-20px;" role="navigation">
+    <div class="nav-wrapper container">
+      <div>
+        <ul class="hide-on-med-and-down">
+          <?php foreach($links as $link): ?>
+            <li>
+                <a href="<?php echo e($link->url); ?>" data-target="slide-out-<?php echo e($link->id); ?>" class="open-side-nav"><?php echo e($link->title); ?></a>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+          <?php foreach($links as $link): ?>
+            <li>
+                <a href="<?php echo e($link->url); ?>" data-target="slide-out-<?php echo e($link->id); ?>" class="open-side-nav"><?php echo e($link->title); ?></a>
+            </li>
+          <?php endforeach; ?>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+      </div>
+    </div>
+</nav>

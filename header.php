@@ -17,10 +17,10 @@
   <style>
     .index_gallery_background {
         background-color:rgb(255, 247, 153) !important;
-        background-image: url("<?php echo get_template_directory_uri() . '/image/index_gallery_left.png'?>"), url("<?php echo get_template_directory_uri() . '/image/index_gallery_right_cut.png'?>");
-        background-repeat: no-repeat, no-repeat;
-        background-position: left bottom, right bottom;
-        background-size: auto 70%, auto 60%;
+        background-image: url("<?php echo get_template_directory_uri() . '/image/small/index_gallery_left.png'?>"), url("<?php echo get_template_directory_uri() . '/image/small/index_gallery_right_cut.png'?>"), url("<?php echo get_template_directory_uri() . '/image/index_bg.png'?>");
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-position: left bottom, right bottom, center 10%;
+        background-size: auto 60%, auto 60%, 100% auto;
         margin-top: 1px;
         width: 100%;
         height: 70% !important;
@@ -33,7 +33,7 @@
       <div class="container container_background">
           <div class="row" style="height:160px;">
           <a href="<?php echo get_site_url();?>">
-              <div class="col s6" style="height:100%;background-image: url('<?php echo get_template_directory_uri()."/image/logo.png";?>');background-repeat:no-repeat; background-size: auto 100%;">
+              <div class="col s6" style="height:100%;background-image: url('<?php echo get_template_directory_uri()."/image/small/logo.png";?>');background-repeat:no-repeat; background-size: auto 100%; background-position: 30% center;">
               </div>
           </a>
           <div class="col s6" style="display: flex;height:100%;background-image: url('<?php echo get_template_directory_uri()."/image/logo_left.png";?>');background-repeat:no-repeat; background-size: auto 100%;">

@@ -1,0 +1,9 @@
+<div class="slider">
+    <ul class="slides">
+        <?php foreach($ids as $key => $id): ?>
+            <li>
+                <img src="<?php echo e(wp_get_attachment_image_src( $id, 'full' )[0]); ?>">
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>

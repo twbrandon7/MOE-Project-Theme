@@ -1,6 +1,6 @@
 <?php
 
-require get_template_directory() . '/vendor/autoload.php';
+require_once get_template_directory() . '/vendor/autoload.php';
 use Jenssegers\Blade\Blade;
 
 $blade = new Blade(get_template_directory().'/views', get_template_directory() .'/cache');

@@ -1,0 +1,19 @@
+<div class="slider">
+    <ul class="slides">
+        <?php foreach($ids as $key => $id): ?>
+            <li>
+                <img src="<?php echo e(wp_get_attachment_image_src( $id, 'full' )[0]); ?>">
+                <div class="caption <?php echo e($aligns[$key%3]); ?>">
+                    <h3>
+                        <span style="background-color: rgba(40,40,40,0.5); padding:15px;"><?php echo e($titles[$key]); ?></span>
+                    </h3>
+                    <?php if($subtitles[$key] != ""): ?>
+                        <h4 class="light grey-text text-lighten-3">
+                            <span style="background-color: rgba(40,40,40,0.5); padding:10px; margin-top:10px;"><?php echo e($subtitles[$key]); ?></span>
+                        </h4>
+                    <?php endif; ?>
+                </div>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>

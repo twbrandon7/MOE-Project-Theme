@@ -1,7 +1,8 @@
 <?php
-require get_template_directory() . '/functions/navbar_generator.php';
-require get_template_directory() . '/functions/gallery_generator.php';
-require get_template_directory() . '/vendor/autoload.php';
+require_once get_template_directory() . '/functions/navbar_generator.php';
+require_once get_template_directory() . '/functions/gallery_generator.php';
+require_once get_template_directory() . '/functions/gallery_shortcode.php';
+require_once get_template_directory() . '/vendor/autoload.php';
 
 use Jenssegers\Blade\Blade;
 $blade = new Blade(get_template_directory().'/views', get_template_directory() .'/cache');
@@ -48,7 +49,12 @@ function get_post_thumb_url($post){
 		$output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
 		$image_url = $matches [1] [0];
 		if(empty($image_url)){
-			$url = get_template_directory_uri()."/image/about-bg.jpg";
+			$arr = get_attached_media("image", $post);
+			if(!empty($arr)){
+				$url = wp_get_attachment_image_src(array_shift(array_slice($arr, 0, 1))->ID, "normal")[0];
+			}else{
+				$url = get_template_directory_uri()."/image/about-bg.jpg";
+			}
 		}else{
 			$url = $image_url;
 		}

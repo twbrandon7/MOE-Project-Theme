@@ -10,7 +10,8 @@
                     <div class="col s6">
                         <div style="padding:10px; background-color:white; border: rounded; border-radius: 10px;">
                             <?php
-                                display_gallery( json_decode( esc_attr( get_option('index_gallery_image_ids') ) ) );
+                                $ids = json_decode( esc_attr( get_option('index_gallery_image_ids') ) );
+                                display_gallery( $ids, [], get_bloginfo('name'), " ");
                             ?>
                         </div>
                     </div>
@@ -20,8 +21,11 @@
         </div>
     </div>
 
-    <div class="section">
-        <div class="row">
+    <div class="section" style="position: relative; margin-top:-150px;">
+        <div style="position: relative; left: 150px; top: 7px; height:135px;">
+            <img src="<?php echo get_template_directory_uri()."/image/small/mascot.png";?>" width="100">
+        </div>
+        <div class="row index_posts">
             <?php
             if (have_posts()) :
                 $args = array( 'posts_per_page' => 3 );
@@ -35,7 +39,7 @@
                     <div class="card">
                         <div class="card-image">
                         <img src="<?php echo get_post_thumb_url($post);?>">
-                        <span class="card-title"><?php the_title();?></span>
+                        <span class="card-title" style="background-color: rgba(40,40,40,0.5);"><?php the_title();?></span>
                         </div>
                         <div class="card-content">
                             <p>

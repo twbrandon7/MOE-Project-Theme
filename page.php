@@ -10,6 +10,9 @@
     $authorObj = get_user_by("ID", $postObj->post_author);
     $author = $authorObj->user_nicename;
     $author_url = get_author_posts_url( $postObj->post_author, $author );
+
+    $content = apply_filters( 'the_content', $content );
+    $content = str_replace( ']]>', ']]&gt;', $content );
 ?>
 
 <div class="container container_background">
@@ -17,7 +20,7 @@
         <div class="row post_content">
             <div class="col s1"></div>
             <div class="col s10">
-                <h2><?php echo $title;?></h2>
+                <h3><?php echo $title;?></h3>
                 <br/>
                 <?php echo $content;?>
                 <div class="post_title" style="margin-top:30px; margin-bottom:20px;">

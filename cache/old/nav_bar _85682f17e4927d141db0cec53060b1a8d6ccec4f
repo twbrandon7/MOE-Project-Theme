@@ -1,0 +1,24 @@
+<nav class="lighten-1" style="background-color:rgb(89, 73, 63);height:50px;line-height:50px;margin-top:-20px;" role="navigation">
+ <div class="nav-wrapper container">
+ <div>
+ <ul class="hide-on-med-and-down">
+ <?php $__currentLoopData = $links; $this->addLoop($__currentLoopData); foreach($__currentLoopData as $link): $this->incrementLoopIndices(); $loop = $this->getFirstLoop(); ?>
+ <li>
+ <a href="<?php echo static::e($link->url); ?>" data-target="slide-out-<?php echo static::e($link->id); ?>" class="open-side-nav"><?php echo static::e($link->title); ?></a>
+ </li>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ </ul>
+
+ <ul id="nav-mobile" class="sidenav">
+ <?php $__currentLoopData = $links; $this->addLoop($__currentLoopData); foreach($__currentLoopData as $link): $this->incrementLoopIndices(); $loop = $this->getFirstLoop(); ?>
+ <li>
+ <a href="<?php echo static::e($link->url); ?>" data-target="slide-out-<?php echo static::e($link->id); ?>" class="open-side-nav"><?php echo static::e($link->title); ?></a>
+ </li>
+ <?php endforeach; $this->popLoop(); $loop = $this->getFirstLoop(); ?>
+ </ul>
+ <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+ <i class="material-icons">menu</i>
+ </a>
+ </div>
+ </div>
+</nav>

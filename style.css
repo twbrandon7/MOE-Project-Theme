@@ -28,6 +28,12 @@ body {
   overflow: hidden;
 }
 
+.index_posts .card-image{
+  min-height: 260px; /* Your height here */
+  max-height: 260px; /* Your height here */
+  overflow: hidden;
+}
+
 .intro_column {
   background-size: cover;
   min-height: 300px !important;
